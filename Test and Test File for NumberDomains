@@ -1,0 +1,13 @@
+@Test
+public void numberDomainsTest1(){
+NumberDomains nd = new NumberDomains("Domain.txt");
+nd.scannFile();
+System.out.println(nd);
+assertThat("don't equals",nd.getNumberDomains(), Is.is(3));
+}
+Test file:
+100010
+111110
+100010
+100010
+000000
