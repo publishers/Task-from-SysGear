@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 /**
  * Created by Sergey ML on 28.07.14.
- * How is it working?
+ * How does it work?
  * This class read line from a file.
- * Creating array of domains if array size = 0 then add the point to the domains.
+ * Creating array of domains: if array size = 0 then add the point to the domains.
  * if array size != 0 check if the point to belong to the one of the consist points of the domains
- * if is true add to the point to domains and the mark increases
- * if it's belong to the two or more point of the consist points of the domains then 
- * add to the point to domains and the mark decreases
+ * if is true add the point to domains and the mark increases
+ * if it's belong to the second or more point of the consist points of the domains then 
+ * add the point to domains and the mark decreases
  * else just add the new point. 
  */
 public class NumberDomains {
