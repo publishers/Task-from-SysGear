@@ -5,7 +5,7 @@ nd.scannFile();
 System.out.println(nd);
 assertThat("don't equals",nd.getNumberDomains(), Is.is(3));
 }
-Test file:
+Test file looks like next:
 100010
 111110
 100010
