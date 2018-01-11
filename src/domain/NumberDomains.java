@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class NumberDomains {
   private File file;
   private Scanner scann;
-  private ArrayList<FieldDomain> domains;
+  private ArrayList<Domain> domains;
   private int lineFromFile;
   private int numberDomains;
 
@@ -45,12 +45,12 @@ public class NumberDomains {
 
   private void processNewDomain(int i, int j) {
     int intersectionDomains = 0;
-    for (FieldDomain domain : domains) {
+    for (Domain domain : domains) {
       if (PointUtils.lengthBetweenPoints(domain.x, i, domain.y, j) == 1) {
         intersectionDomains++;
       }
     }
-    domains.add(new FieldDomain(i, j));
+    domains.add(new Domain(i, j));
     checkDomains(intersectionDomains);
   }
 

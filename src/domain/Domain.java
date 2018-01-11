@@ -1,10 +1,10 @@
 package domain;
 
-public class FieldDomain {
+public class Domain {
   public int x;
   public int y;
 
-  public FieldDomain(int x, int y) {
+  public Domain(int x, int y) {
     this.x = x;
     this.y = y;
   }
