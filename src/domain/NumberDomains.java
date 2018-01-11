@@ -23,17 +23,17 @@ public class NumberDomains {
     file = new File(fileName);
   }
 
-  public void readFile() throws FileNotFoundException {
+  public void findDomainsFromFile() throws FileNotFoundException {
     scann = new Scanner(file);
     while (scann.hasNext()) {
-      writeToDomain(scann.nextLine().getBytes());
+      findDomains(scann.nextLine().getBytes());
     }
   }
 
-  private void writeToDomain(byte[] bytes) {
+  private void findDomains(byte[] bytes) {
     for (int i = 0; i < bytes.length; i++) {
       if (isDomain(bytes[i])) {
-        checkNewDomain(this.lineFromFile, i);
+        processNewDomain(this.lineFromFile, i);
       }
     }
     this.lineFromFile++;
@@ -43,7 +43,7 @@ public class NumberDomains {
     return domain - (byte) 48 == 1;
   }
 
-  private void checkNewDomain(int i, int j) {
+  private void processNewDomain(int i, int j) {
     int intersectionDomains = 0;
     for (FieldDomain domain : domains) {
       if (PointUtils.lengthBetweenPoints(domain.x, i, domain.y, j) == 1) {
