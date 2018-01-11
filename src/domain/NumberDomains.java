@@ -20,17 +20,11 @@ public class NumberDomains {
 
   public NumberDomains(String fileName) {
     domains = new ArrayList<>();
-    if (new File(fileName).exists()) {
-      try {
-        file = new File(fileName);
-        scann = new Scanner(file);
-      } catch (FileNotFoundException e) {
-        e.printStackTrace();
-      }
-    } else System.err.println("File not exist");
+    file = new File(fileName);
   }
 
-  public void readFile() {
+  public void readFile() throws FileNotFoundException {
+    scann = new Scanner(file);
     while (scann.hasNext()) {
       writeToDomain(scann.nextLine().getBytes());
     }
@@ -45,7 +39,7 @@ public class NumberDomains {
     this.lineFromFile++;
   }
 
-  private boolean isDomain(byte domain){
+  private boolean isDomain(byte domain) {
     return domain - (byte) 48 == 1;
   }
 
