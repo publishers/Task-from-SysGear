@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//TODO NEED REFACTORING
 public class NumberDomains {
   private File file;
   private Scanner scann;
